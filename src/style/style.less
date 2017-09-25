@@ -1,0 +1,179 @@
+@orange: #ee7423;
+@offBlack: #414042;
+@offWhite: #fafafa;
+@gray: #dddddd;
+
+body {
+  padding: 20px;
+  font-family: "Trebuchet MS", "Verdana", "sans-serif";
+  color: @offBlack;
+  overflow-x: hidden; /* Prevent horizontal scroll when .tweet is dragged off the viewport */
+}
+
+.title {
+  margin: 0;
+  font-size: 50px;
+  line-height: 45px;
+
+  &--highlight {
+    color: @orange;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 16px;
+  border-bottom: 1px solid @offBlack;
+}
+
+.search {
+  margin: 20px 0;
+
+  &__input {
+    width: 50%;
+    padding: 10px;
+    vertical-align: middle;
+    border: 1px solid @offBlack;
+  }
+
+  &__button {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    border: 1px solid @offBlack;
+    background: url('../images/magnify-glass.png') no-repeat;
+    background-size: 38px;
+    vertical-align: middle;
+    cursor: pointer;
+
+    &:hover {
+      background-position: 0 -76px;
+    }
+
+    &:active {
+      background-position: 0 -38px;
+    }
+  }
+}
+
+.instructions {
+  position: relative;
+  min-height: 79px;
+
+  &__text {
+    position: absolute;
+    bottom: 15px;
+    margin: 0;
+  }
+}
+
+.col {
+  &__left {
+    float: left;
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+  }
+
+  &__right {
+    float: right;
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+  }
+}
+
+.list {
+  margin-bottom: 20px;
+  min-height: 400px;
+
+  &__saved {
+    padding-bottom: 50px;
+    background: @gray;
+    border: 1px dashed @offBlack;
+  }
+}
+
+.tweet {
+  position: relative;
+  margin-top: -1px; /* prevent double bottom border */
+  padding: 10px;
+  border: 1px solid @offBlack;
+  background: @offWhite;
+  cursor: move;
+  font-size: 14px;
+
+  &:last-child {
+    border-bottom: 1px solid @offBlack;
+  }
+
+  &__avatar {
+    float: left;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+  }
+
+  &__content {
+    margin-left: 10px;
+    overflow: hidden;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__handle {
+    margin-left: 10px;
+    font-size: 12px;
+
+    &::before {
+      content: '@';
+    }
+
+    &-link {
+      text-decoration: none;
+      color: @offBlack;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    margin: 4px 0 0 5px;
+    float: right;
+    font-size: 12px;
+  }
+
+  &__message {
+    margin-bottom: 0;
+
+    &-link {
+      text-decoration: none;
+      color: @orange;
+    }
+  }
+
+  &__close {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 18px;
+    width: 18px;
+    background: @offWhite;
+    border-radius: 20px;
+    border: 1px solid @offBlack;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      color: @orange;
+    }
+  }
+
+  &:hover .tweet__close {
+    display: block;
+  }
+}

@@ -1,0 +1,146 @@
+body {
+  padding: 20px;
+  font-family: "Trebuchet MS", "Verdana", "sans-serif";
+  color: #414042;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll when .tweet is dragged off the viewport */
+}
+.title {
+  margin: 0;
+  font-size: 50px;
+  line-height: 45px;
+}
+.title--highlight {
+  color: #ee7423;
+}
+.subtitle {
+  margin: 0;
+  font-size: 16px;
+  border-bottom: 1px solid #414042;
+}
+.search {
+  margin: 20px 0;
+}
+.search__input {
+  width: 50%;
+  padding: 10px;
+  vertical-align: middle;
+  border: 1px solid #414042;
+}
+.search__button {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #414042;
+  background: url('../images/magnify-glass.png') no-repeat;
+  background-size: 38px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.search__button:hover {
+  background-position: 0 -76px;
+}
+.search__button:active {
+  background-position: 0 -38px;
+}
+.instructions {
+  position: relative;
+  min-height: 79px;
+}
+.instructions__text {
+  position: absolute;
+  bottom: 15px;
+  margin: 0;
+}
+.col__left {
+  float: left;
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+}
+.col__right {
+  float: right;
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+}
+.list {
+  margin-bottom: 20px;
+  min-height: 400px;
+}
+.list__saved {
+  padding-bottom: 50px;
+  background: #dddddd;
+  border: 1px dashed #414042;
+}
+.tweet {
+  position: relative;
+  margin-top: -1px;
+  /* prevent double bottom border */
+  padding: 10px;
+  border: 1px solid #414042;
+  background: #fafafa;
+  cursor: move;
+  font-size: 14px;
+}
+.tweet:last-child {
+  border-bottom: 1px solid #414042;
+}
+.tweet__avatar {
+  float: left;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+.tweet__content {
+  margin-left: 10px;
+  overflow: hidden;
+}
+.tweet__name {
+  font-weight: bold;
+}
+.tweet__handle {
+  margin-left: 10px;
+  font-size: 12px;
+}
+.tweet__handle::before {
+  content: '@';
+}
+.tweet__handle-link {
+  text-decoration: none;
+  color: #414042;
+}
+.tweet__date {
+  display: inline-block;
+  margin: 4px 0 0 5px;
+  float: right;
+  font-size: 12px;
+}
+.tweet__message {
+  margin-bottom: 0;
+}
+.tweet__message-link {
+  text-decoration: none;
+  color: #ee7423;
+}
+.tweet__close {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 18px;
+  width: 18px;
+  background: #fafafa;
+  border-radius: 20px;
+  border: 1px solid #414042;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+.tweet__close:hover {
+  color: #ee7423;
+}
+.tweet:hover .tweet__close {
+  display: block;
+}

@@ -1,0 +1,32 @@
+{
+  "name": "tweet-saver",
+  "version": "1.0.0",
+  "description": "Allows users to query and save tweets to local storage via UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-preset-env": "^1.6.0",
+    "connect": "^3.6.3",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-eslint": "^4.0.0",
+    "gulp-export": "^2.2.0",
+    "gulp-less": "^3.3.2",
+    "gulp-open": "^2.0.0",
+    "jquery": "^3.2.1",
+    "jquery-ui-dist": "^1.12.1",
+    "jquery-ui-touch-punch": "^0.2.3",
+    "normalize.css": "^7.0.0",
+    "open": "0.0.5",
+    "path": "^0.12.7",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
